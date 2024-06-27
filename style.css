@@ -1,0 +1,327 @@
+@font-face {
+    font-family: font-regular;
+    src: url(font/sf-pro-display_regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font-regular;
+}
+html,body{
+    min-height: 100vh;
+    width: 100%;
+}
+#main{
+    width: 100%;
+    min-height: 100vh;
+}
+nav{
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    width: 100%;
+    height: 6.6vh;
+    background-color: rgb(86, 84, 84);
+    font-size: small;
+}
+
+nav>a{
+    text-decoration: none;
+    color: #cbc6c6;
+    
+}
+nav>i{
+    font-size: 1.1vw;
+    color: #fff;
+}
+nav>a:hover{
+    border-bottom: 1px solid #fff;
+}
+.part1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    overflow: hidden;
+}
+
+.textpart-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    gap: 1vh;
+    top: 12%;
+    color: #fff;
+}
+.textpart-1 h1{
+    font-size: 3vw;
+}
+.textpart-1 p{
+    font-size: 1.6vw;
+}
+.link1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+.link1 a{
+    text-decoration: none;
+    color: rgb(26, 141, 242);
+    font-size: 1.2vw;
+}
+.link1 a:hover{
+    border-bottom: 1px solid rgb(26, 141, 242);
+}
+.textpart-2{
+    color: black;
+}
+.part-3{
+    position: relative;
+    background-image: url(media-data/hero_watchpart3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.textpart-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: 2vh;
+    top: 68%;
+    color: white;
+
+}
+.link3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw 2vh;
+}
+.link3>button{
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2vw;
+}
+.part4{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 0px 10px;
+    width: 100%;
+}
+.part4-1 .part4-2 .part4-3 .part4-4 .part4-5 .part4-6 .part4-7 .part4-8 .part4-9{
+    width: 50%;    
+}
+.textpart-4{
+    color: black;
+}
+.textpart-5{
+    color: black;
+}
+.textpart-7{
+    color: black;
+}
+.textpart-8{
+    color: black;
+}
+.slider{
+    height: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+    place-items: center;
+}
+.slider-track{
+    display: flex;
+    width: calc(100vw*5);
+    animation: scroll 40s linear infinite;
+}
+
+.slide-img{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.slider-2{
+    display: none;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(calc(-100vw*5));
+    }
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: small;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+footer>p{
+      width: 60vw;
+      height: 20vh;
+}
+footer>#dd{
+    margin-top: 10%;
+}
+.para{
+    margin: 5%;
+    color: gray;
+    height: 100%;
+    margin-top: 2%;
+}
+footer>.para>p>u{
+    color: rgb(72, 70, 70);
+}
+.option{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap: 5%;
+}
+#menu{
+    display: none;
+}
+@media (max-width:500px) {
+    #partO{
+       background-image: url(/responsive/part1.jpg); 
+    }
+    .slider{
+        display: none;
+    }
+    
+    nav{
+        gap: 5vw;
+    }
+    nav a{
+        display: none;
+        margin: 20px 0;
+    }
+    nav i{
+        font-size: 5vw;
+    }
+    .fa-brands{
+           margin-right: 60vw;
+    }
+    #menu {
+        display: initial;
+    }
+    .responsive-nav{
+        padding: 10vw 10vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+    .responsive-nav a{
+        font-size: 4vw;
+        text-decoration: none;
+        color: #333;
+    }
+    .responsive-nav i{
+        position: absolute;
+        top: 1%;
+        right: 5%;
+        font-size: 4vw;
+    }
+    .textpart-1 h1{
+        font-size: 10vw;
+    }
+    .textpart-1 p{
+        font-size: 5vw;
+    }
+    .link1 a{
+        font-size: 5.2vw;
+    }
+    .textpart-1{
+        gap: 2vh;
+    }
+    
+    .part4{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+        gap: 0px;
+    }
+    .part4>.part4-1{
+        background-image: url(responsive/part4-1.jpg);
+    }
+    .part4>.part4-2{
+        background-image: url(responsive/4-2.jpg);
+    }
+    .part4>.part4-3{
+        background-image: url(media-data/part5-1.jpg);
+    }
+    .part4>.part4-4{
+        background-image: url(responsive/4-4.jpg);
+    }
+    .part4>.part4-5{
+        background-image: url(media-data/part6-1.jpg);
+    }
+    .part4>.part4-6{
+        background-image: url(media-data/part6-2.jpg);
+    }
+    
+    .slider-2{
+        height: 100%;
+        margin-top: 10%;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        place-items: center;
+    }
+    .slider-track-2{
+        display: flex;
+        width: calc(100vw*5);
+        animation: scroll 40s linear infinite;
+    }
+    
+    .slide-img-2{
+        height: 120vh;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        
+    }
+    footer>.para{
+            margin: 5%;
+            height: 100%;
+            margin-top: 50%;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 150vh;
+        overflow: hidden;
+    }
+    footer>p{
+        height: 20vh;
+        width: 60vw;
+    }
+    
+}
